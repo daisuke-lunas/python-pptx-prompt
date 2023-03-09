@@ -2,7 +2,7 @@ from pptx.shapes.connector import Connector
 from pptx.shapes.autoshape import Shape
 
 
-buffer = 100
+buffer = 100  # コネクタとして接続できていても、位置は若干ずれるっぽい
 
 
 class ConnectorDetail:

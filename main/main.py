@@ -60,14 +60,10 @@ for connector in connectorList:
                     dtl.startAt = shp
                 if dtl.connectorEndAt(shp):
                     dtl.endAt = shp
-                # begin_x/yを見て、shapeの中/外側周辺にあるかを判定
-                # あったら、startAtに入れる
-                # end_x/yも同じく
             connectorDtlList.append(dtl)
 
 for dtl in connectorDtlList:
-    # 期待結果のCSVを作成する
-    # [startAtのtext],[endAtのtext]でコンソールに
+    # 期待結果でCSVを作成する
     id = str(dtl.connector.shape_id)
     startText = dtl.startAt.text if dtl.startAt != None else "なし"
     endText = dtl.endAt.text if dtl.endAt != None else "なし"
